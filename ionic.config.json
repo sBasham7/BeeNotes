@@ -1,0 +1,8 @@
+{
+  "name": "BeeNotes",
+  "app_id": "c7d7c0af",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
