@@ -10,8 +10,8 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-input type="text" [(ngModel)]="note.title"></ion-input>
-    <ion-input type="color" ion-input [(ngModel)]="note.color"></ion-input>
+    <input type="text" [(ngModel)]="note.title" />
+    <input type="color" ion-input [(ngModel)]="note.color" />
   </ion-navbar>
 
 </ion-header>
@@ -30,17 +30,13 @@
       </tr>
       <tr>
         <td colspan="2">
-          <ion-textarea [(ngModel)]="note.text">
+          <textarea [(ngModel)]="note.text">
             
-          </ion-textarea>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="2">
-          <button ion-button (click)="save()">Save</button>
-          <button ion-button color="danger" (click)="cancel()">Cancel</button>
+          </textarea>
         </td>
       </tr>
     </tbody>
   </table>
+  <button ion-button (click)="save()">Save</button>
+  <button ion-button color="danger" (click)="cancel()">Cancel</button>
 </ion-content>

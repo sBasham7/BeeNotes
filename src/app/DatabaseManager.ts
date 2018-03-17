@@ -102,13 +102,6 @@ export class DatabaseManager {
         if (this.windowRef.nativeWindow.cordova.platformId !== 'browser'
                 && this.windowRef.nativeWindow.sqlitePlugin !== undefined) {
 
-            this._db = new this.windowRef.nativeWindow.sqlitePlugin.openDatabase({
-                name: 'BeeNotes.db',
-                location: 'default',
-                androidDatabaseImplementation: 2,
-                androidLockWorkaround: 1
-            });
-
             const tmpResults = this._db.executeSql(sql, parameters);
 
             for (let tmp in tmpResults.rows) {

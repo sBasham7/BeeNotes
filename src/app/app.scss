@@ -21,3 +21,41 @@
 table {
     width: 100%;
 }
+
+div.ui-datepicker{
+    font-size:10px;
+}
+
+input[type=text] {
+    min-width: 95%;
+}
+
+textarea {
+    width:100%;
+    min-height: 100px;
+}
+
+table.calendar-table {
+    width:100%;
+    height:100%;
+    table-layout: fixed;
+}
+
+.calendar-table td {
+    text-align: center;
+}
+
+.calendar-table td table {
+    width:100%;
+    height:100%;
+}
+
+table.list td > button {
+    width: 98%;
+}
+
+input[type=checkbox]
+{
+  transform: scale(2.25);
+  padding: 10px;
+}
