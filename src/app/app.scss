@@ -1,3 +1,6 @@
+@import "../../node_modules/font-awesome/scss/font-awesome";
+@import "../node_modules/jqueryui/jquery-ui.min.css";
+@import "../node_modules/jqueryui/jquery-ui.theme.min.css";
 // http://ionicframework.com/docs/theming/
 
 
@@ -14,3 +17,7 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+table {
+    width: 100%;
+}

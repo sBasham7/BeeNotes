@@ -1,0 +1,54 @@
+<!--
+  Generated template for the CalendarPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <button ion-button class="btn btn-default" (click)="prevYear()">
+              <span class="fa fa-fast-backward"></span>
+            </button>
+          </th>
+          <th>
+            <button ion-button class="btn btn-default" (click)="prevMonth()">
+              <span class="fa fa-backward"></span>
+            </button>
+          </th>
+          <th colspan="3"><ion-title>{{currentMonthName}}, {{currentYear}}</ion-title></th>
+          <th>
+            <button ion-button class="btn btn-default" (click)="nextMonth()">
+              <span class="fa fa-fast-forward"></span>
+            </button>
+          </th>
+          <th>
+            <button ion-button class="btn btn-default" (click)="nextYear()">
+              <span class="fa fa-fast-forward"></span>
+            </button>
+          </th>
+        </tr>
+      </thead>
+    </table>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <table class="calendar-table">
+    <tbody>
+      <tr *ngFor="let week of currentWeeks" style="text-align:center;vertical-align:middle;">
+        <td *ngFor="let day of week" class="cal-day">
+          <button ion-button full [style.background]="day.backgroundColor" [style.color]="day.foregroundColor" (click)="openDay(day)" *ngIf="day.dayNumber > 0">{{day.dayNumber}}</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</ion-content>
